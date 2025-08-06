@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Formatting Demo</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #6d9097;
+      color: #333;
+      padding: 20px;
+    }
+
+    .formatted-text {
+     
+      font-size: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-shadow: none;
+      line-height: 1.5;
+       
+      color: #040101;
+    }
+    button{
+       margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+
+ <h1>Simple Text Formatting .</h1>
+   <div style="text-align: center;">
+  <label for="inputString">Enter a String:</label>
+        <input type="text" id="format" class="formatted-text ">
+   </div>
+<div style="text-align: center; padding-top: 40px;" >
+  <button onclick="applyBold()">Bold</button>
+  <button onclick="applyItalic()">Italic</button>
+  <button onclick="changeFontSize()">Font Size</button>
+  <button onclick="changeFontType()">Font Type</button>
+  <button onclick="applyUnderline()">Underline</button>
+  <button onclick="applyBorder()">Border</button>
+  <button onclick="applyTextShadow()">Text Shadow</button>
+  <button onclick="adjustLineSpacing()">Line Spacing</button>
+  <button onclick="changeBackgroundColor()">Background Color</button>
+  <button onclick="changeTextColor()">Text Color</button>
+</div>
+  <script>
+  
+    function applyBold() {
+      document.getElementById('format').style.fontWeight = 'bold';
+    }
+
+    function applyItalic() {
+      document.getElementById('format').style.fontStyle = 'italic';
+    }
+
+    function changeFontSize() {
+      document.getElementById('format').style.fontSize = '40px';
+    }
+
+    function changeFontType() {
+      document.getElementById('format').style.fontFamily = 'Times New Roman, serif';
+    }
+
+    function applyUnderline() {
+      document.getElementById('format').style.textDecoration = 'underline';
+    }
+
+    function applyBorder() {
+      document.getElementById('format').style.border = '2px solid yellow';
+    }
+
+    function applyTextShadow() {
+      document.getElementById('format').style.textShadow = '2px 2px 4px rgba(0, 0, 0, 0.5)';
+    }
+
+    function adjustLineSpacing() {
+      document.getElementById('format').style.lineHeight = '2';
+    }
+
+    function changeBackgroundColor() {
+      document.getElementById('format').style.backgroundColor = 'pink';
+    }
+
+    function changeTextColor() {
+      document.getElementById('format').style.color = 'red';
+    }
+  </script>
+</body>
+</html>
