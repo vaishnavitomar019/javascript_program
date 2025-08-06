@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+	 zoom-in and zoom-out
+		
+	</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+     
+    </style>
+
+
+</head>
+
+<body style="text-align:center; background-color: rgb(35, 74, 61);">
+
+	<h1 style="color:rgb(214, 25, 217);">
+        Zoom In Or Zoom out  on Image 
+	<hr>
+
+	<div class="box">
+
+		<img src="https://i.pinimg.com/originals/75/3a/34/753a34a2136f0e664c15d6c5628d4b31.jpg"
+            style="height:600px; margin-top: 20px;"
+             
+        
+			id="img1" GFG="250"
+			alt="flower">
+	</div>
+	
+
+	<button type="button" onclick="zoomin() " style="font-size: 20px;">
+		<i class="fas fa-search-plus"></i> Zoom In
+	</button>
+
+	<button type="button" onclick="zoomout()" style="font-size: 20px;">
+        <i class="fas fa-search-minus fs-1"></i> Zoom Out
+	</button>
+
+	<script type="text/javascript">
+		function zoomin() {
+			let GFG = document.getElementById("img1");
+			let currWidth = GFG.clientWidth;
+			GFG.style.width = (currWidth + 100) + "px";
+		}
+
+		function zoomout() {
+			let GFG = document.getElementById("img1");
+			let currWidth = GFG.clientWidth;
+			GFG.style.width = (currWidth - 100) + "px";
+		} 
+	</script>
+</body>
+
+</html>
