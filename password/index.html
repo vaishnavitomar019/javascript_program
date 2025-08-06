@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Password Generator</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+    }
+
+    #container {
+      text-align: center;
+      padding: 20px;
+      background-color: #c8c5c5;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 1em;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1.2em;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    #password {
+      font-size: 1.5em;
+      margin-top: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <label for="passwordLength" ><strong> Password Length:</strong></label>
+    <input type="number" id="passwordLength" placeholder="Enter password length" />
+
+    <button onclick="generatePassword()">Generate Password</button>
+
+    <div id="password"></div>
+  </div>
+
+  <script>
+    function generatePassword() {
+      const passwordLength = document.getElementById('passwordLength').value;
+      const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-+=<>?";
+      let password = "";
+
+      for (let i = 0; i < passwordLength; i++) {
+        const randomIndex = Math.floor(Math.random() * charset.length);
+        password += charset[randomIndex];
+      }
+
+      document.getElementById('password').innerText = password;
+    }
+  </script>
+</body>
+</html>
